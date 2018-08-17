@@ -19,16 +19,16 @@ ENV APPS="740" \
         -game csgo \
 		-usercon \
 		-nobreakpad \
-        -tickrate ${TICKRATE} \
-        -maxplayers ${MAXPLAYERS} \
-        -authkey ${AUTHKEY} \
-        +host_workshop_collection ${WORKSHOPCOLLECTIONID} \
+        -tickrate \${TICKRATE} \
+        -maxplayers \${MAXPLAYERS} \
+        -authkey \${AUTHKEY} \
+        +host_workshop_collection \${WORKSHOPCOLLECTIONID} \
 		+workshop_start_map \
-        +gamemode ${GAMEMODE} \
-		+game_type ${GAMETYPE} \
-        +map ${MAP} \
-		+mapgroup ${MAPGROUP} \
-        +sv_setsteamaccount ${GLST} \
-        +servercfgfile ${CONFIG} \
-        ${CUSTOMPARAMETERS} \
+        +gamemode \${GAMEMODE} \
+		+game_type \${GAMETYPE} \
+        +map \${MAP} \
+		+mapgroup \${MAPGROUP} \
+        +sv_setsteamaccount \${GLST} \
+        +servercfgfile \${CONFIG} \
+        \${CUSTOMPARAMETERS} \
     "
