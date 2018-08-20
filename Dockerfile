@@ -6,41 +6,41 @@ ENV \
 	#
 	# Public access
 	# APPID: 730
-    # http://steamcommunity.com/dev/managegameservers
-    GLST="" \
+	# http://steamcommunity.com/dev/managegameservers
+	GLST="" \
 	#
 	# Workshop config
-    # http://steamcommunity.com/dev/apikey
-    AUTHKEY="" \
-    WORKSHOPCOLLECTIONID="" \
+	# http://steamcommunity.com/dev/apikey
+	AUTHKEY="" \
+	WORKSHOPCOLLECTIONID="" \
 	#
 	# Server config
-    TICKRATE="128" \
-    MAXPLAYERS="16" \
-    GAMEMODE="0" \
+	TICKRATE="128" \
+	MAXPLAYERS="16" \
+	GAMEMODE="0" \
 	GAMETYPE="0" \
-    MAP="de_mirage" \
-    MAPGROUP="mg_active" \
-    CONFIG="server.cfg" \
+	MAP="de_mirage" \
+	MAPGROUP="mg_active" \
+	CONFIG="server.cfg" \
 	#
 	# Other
-    CUSTOMPARAMETERS="" \
+	CUSTOMPARAMETERS="" \
 	#
 	# Start parameters
-    SRCDSPARAMS="\
-        -game csgo \
+	SRCDSPARAMS="\
+		-game csgo \
 		-usercon \
 		-nobreakpad \
-        -tickrate \${TICKRATE} \
-        -maxplayers \${MAXPLAYERS} \
-        -authkey \${AUTHKEY} \
-        +host_workshop_collection \${WORKSHOPCOLLECTIONID} \
+		-tickrate \${TICKRATE} \
+		-maxplayers \${MAXPLAYERS} \
+		-authkey \${AUTHKEY} \
+		+host_workshop_collection \${WORKSHOPCOLLECTIONID} \
 		+workshop_start_map \
-        +game_mode \${GAMEMODE} \
+		+game_mode \${GAMEMODE} \
 		+game_type \${GAMETYPE} \
-        +map \${MAP} \
+		+map \${MAP} \
 		+mapgroup \${MAPGROUP} \
-        +sv_setsteamaccount \${GLST} \
-        +servercfgfile \${CONFIG} \
-        \${CUSTOMPARAMETERS} \
-    "
+		+sv_setsteamaccount \${GLST} \
+		+servercfgfile \${CONFIG} \
+		\${CUSTOMPARAMETERS} \
+	"
