@@ -1,20 +1,32 @@
 FROM hackebein/srcds
 
-ENV APPS="740" \
-    TICKRATE="128" \
-    MAXPLAYERS="16" \
-    #http://steamcommunity.com/dev/apikey
+ENV \
+	# App
+	APPS="740" \
+	#
+	# Public access
+	# APPID: 730
+    # http://steamcommunity.com/dev/managegameservers
+    GLST="" \
+	#
+	# Workshop config
+    # http://steamcommunity.com/dev/apikey
     AUTHKEY="" \
     WORKSHOPCOLLECTIONID="" \
-    # sandbox or terrortown
+	#
+	# Server config
+    TICKRATE="128" \
+    MAXPLAYERS="16" \
     GAMEMODE="0" \
 	GAMETYPE="0" \
     MAP="de_mirage" \
     MAPGROUP="mg_active" \
-    #http://steamcommunity.com/dev/managegameservers APPID: 4000
-    GLST="" \
     CONFIG="server.cfg" \
+	#
+	# Other
     CUSTOMPARAMETERS="" \
+	#
+	# Start parameters
     SRCDSPARAMS="\
         -game csgo \
 		-usercon \
@@ -24,7 +36,7 @@ ENV APPS="740" \
         -authkey \${AUTHKEY} \
         +host_workshop_collection \${WORKSHOPCOLLECTIONID} \
 		+workshop_start_map \
-        +gamemode \${GAMEMODE} \
+        +game_mode \${GAMEMODE} \
 		+game_type \${GAMETYPE} \
         +map \${MAP} \
 		+mapgroup \${MAPGROUP} \
