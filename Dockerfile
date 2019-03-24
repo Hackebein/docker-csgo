@@ -4,14 +4,19 @@ ENV \
 	# App
 	APPS="740" \
 	#
+	# API
+	# http://steamcommunity.com/dev/apikey
+	AUTHKEY="" \
+	#
 	# Public access
+	# automatic via API
+	GLSTAPP="730" \
+	# manual
 	# APPID: 730
 	# http://steamcommunity.com/dev/managegameservers
 	GLST="" \
 	#
-	# Workshop config
-	# http://steamcommunity.com/dev/apikey
-	AUTHKEY="" \
+	# Workshop config (require API)
 	WORKSHOPCOLLECTIONID="" \
 	#
 	# Server config
@@ -40,7 +45,6 @@ ENV \
 		+game_type \${GAMETYPE} \
 		+map \${MAP} \
 		+mapgroup \${MAPGROUP} \
-		+sv_setsteamaccount \${GLST} \
 		+servercfgfile \${CONFIG} \
 		\${CUSTOMPARAMETERS} \
 	"
