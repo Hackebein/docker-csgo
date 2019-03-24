@@ -56,14 +56,8 @@ docker run \
 
 ## Additional Environment
 
-PORT: Connection Port
-(`Default: 27015`)
-
 TICKRATE: Tickrate of server, **Attention:** Change not recommended
 (`Default: 128`)
-
-CLIENTPORT:
-(`Default: 27005`)
 
 GAMEMODE:
 (`Default: 0`)
@@ -85,3 +79,7 @@ MAXPLAYERS: Max players
 
 CUSTOMPARAMETERS: additional parameters
 (`Default: `)
+
+## More Options
+
+You can found more configuration options on the parent image page [hackebein/srcds](https://hub.docker.com/r/hackebein/srcds)
