@@ -7,7 +7,7 @@ Counter-Strike: Global Offensive is a multiplayer first-person shooter video gam
 ## Basic
 
 ```
-docker run \
+docker run -it \
     --expose 27015 \
     hackebein/csgo
 ```
@@ -15,7 +15,7 @@ docker run \
 ## Enable API
 
 ```
-docker run \
+docker run -it \
     --expose 27015 \
     -e "AUTHKEY=..." \
     hackebein/csgo
@@ -26,7 +26,7 @@ Get your [AUTHKEY](http://steamcommunity.com/dev/apikey)
 If you have activated the API, this step happens automatically.
 
 ```
-docker run \
+docker run -it \
     --expose 27015 \
     -e "GLST=..." \
     hackebein/csgo
@@ -38,7 +38,7 @@ Get your [GLST](http://steamcommunity.com/dev/managegameservers) (`APPID: 740`)
 Workshop access requires the API.
 
 ```
-docker run \
+docker run -it \
     --expose 27015 \
     -e "AUTHKEY=..." \
     -e "WORKSHOPCOLLECTIONID=..." \
@@ -48,7 +48,7 @@ docker run \
 ## Config
 
 ```
-docker run \
+docker run -it \
     --expose 27015 \
     -v ./server.cfg:/opt/steam/csgo/cfg/server.cfg \
     hackebein/csgo
