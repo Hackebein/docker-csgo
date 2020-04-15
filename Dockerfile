@@ -20,6 +20,7 @@ ENV \
 	WORKSHOPCOLLECTIONID="" \
 	#
 	# Server config
+	GAME="csgo" \
 	TICKRATE="128" \
 	MAXPLAYERS="16" \
 	GAMEMODE="0" \
@@ -28,12 +29,9 @@ ENV \
 	MAPGROUP="mg_active" \
 	CONFIG="server.cfg" \
 	#
-	# Other
-	CUSTOMPARAMETERS="" \
-	#
 	# Start parameters
 	SRCDSPARAMS="\
-		-game csgo \
+		-game \${GAME} \
 		-usercon \
 		-nobreakpad \
 		-tickrate \${TICKRATE} \
