@@ -2,7 +2,7 @@ FROM hackebein/srcds
 
 ENV \
 	# App
-	APPS="740 -validate -language en" \
+	APPS="730 -validate -language en" \
 	#
 	# API
 	# http://steamcommunity.com/dev/apikey
@@ -20,8 +20,6 @@ ENV \
 	WORKSHOPCOLLECTIONID="" \
 	#
 	# Server config
-	GAME="csgo" \
-	TICKRATE="128" \
 	MAXPLAYERS="16" \
 	GAMEMODE="0" \
 	GAMETYPE="0" \
@@ -29,12 +27,10 @@ ENV \
 	MAPGROUP="mg_active" \
 	CONFIG="server.cfg" \
 	#
+	SRCDSBIN="game/bin/linuxsteamrt64/cs2" \
 	# Start parameters
 	SRCDSPARAMS="\
-		-game \${GAME} \
-		-usercon \
-		-nobreakpad \
-		-tickrate \${TICKRATE} \
+		-dedicated \
 		-maxplayers \${MAXPLAYERS} \
 		-authkey \${AUTHKEY} \
 		+host_workshop_collection \${WORKSHOPCOLLECTIONID} \
