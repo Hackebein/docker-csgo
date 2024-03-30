@@ -1,5 +1,11 @@
 FROM hackebein/srcds
 
+RUN \
+	mkdir -p "$HOME/.steam/sdk32/" && \
+	ln -s "/opt/steamcmd/linux32/steamclient.so" "$HOME/.steam/sdk32/" && \
+	mkdir -p "$HOME/.steam/sdk64/" && \
+	ln -s "/opt/steamcmd/linux64/steamclient.so" "$HOME/.steam/sdk64/"
+
 ENV \
 	# App
 	APPS="730 -validate -language en" \
@@ -31,6 +37,8 @@ ENV \
 	# Start parameters
 	SRCDSPARAMS="\
 		-dedicated \
+		-console \
+		-usercon \
 		-maxplayers \${MAXPLAYERS} \
 		-authkey \${AUTHKEY} \
 		+host_workshop_collection \${WORKSHOPCOLLECTIONID} \
